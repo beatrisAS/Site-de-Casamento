@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="src/site-icone.png" type="image/png">
+    <title>Zuleika & Ubiratam</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"> async></script>
+    <script src="https://unpkg.com/wavesurfer.js"> async></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <img src="src/Logo.png" alt="Logo">
+            <div class="logo">Zuleika & Ubiratam</div>
+        </div>
+        <nav id="desktop-menu">
+            <ul>
+                <li><a href="#detalhes">Detalhes</a></li>
+                <li><a href="#sobre">Sobre os Noivos</a></li>
+                <li><a href="#local">Local</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#rsvp">Confirmação de Presença</a></li>
+            </ul>
+        </nav>
+        <div id="menu-icon" onclick="toggleMenu()">☰</div>
+    </header>
+    <!-- Menu lateral suspenso -->
+    <aside id="mobile-menu" class="hidden">
+        <ul>
+            <li><a href="#detalhes">Detalhes</a></li>
+            <li><a href="#sobre">Sobre os Noivos</a></li>
+            <li><a href="#local">Local</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#rsvp">Confirmação de Presença</a></li>
+        </ul>
+    </aside>
+    <!-- Capa com foto do casal -->
+    <section class="cover">
+        <img src="src/cover.jpg" alt="Foto do Casal">
+    </section>
+    <!-- Contagem Regressiva -->
+    <section class="countdown" data-aos="fade-up">
+        <h1>Contagem Regressiva</h1>
+        <div id="countdown-timer"></div>
+    </section>
+    <!-- Detalhes do Casamento -->
+    <section id="detalhes" data-aos="fade-up"> <h2>Detalhes do Casamento</h2> <p>Estamos radiantes em compartilhar nosso grande dia com você! A cerimônia será realizada ao ar livre, rodeada por jardins floridos e árvores centenárias que criam um cenário de sonho no encantador Jardim Encantado. Para aqueles que chegarem mais cedo, haverá uma área de boas-vindas com refrescos e música suave, preparando o ambiente para a nossa união.</p> <p><strong>Data:</strong> 15 de Dezembro de 2024</p> <p><strong>Horário da Cerimônia:</strong> 15h00</p> <p><strong>Local:</strong> Jardim Encantado, Avenida das Flores, 123</p> <p><strong>Traje:</strong> Social Completo. Sugerimos tons claros para harmonizar com o ambiente natural do espaço.</p> <p>A recepção acontecerá no Salão Elegance, logo após a cerimônia, onde celebraremos com um jantar especial e muita música.</p> </section>
+
+    <!-- Sobre os Noivos -->
+    <section id="sobre" data-aos="fade-up"> <h2>Sobre os Noivos</h2> <p>Zuleika e Ubiratam se conheceram em uma tarde ensolarada enquanto passeavam no Parque da Cidade, ambos acompanhados de seus cães. O destino uniu esses dois corações com a mesma paixão por aventuras ao ar livre, música e gastronomia. Desde aquele encontro, eles têm explorado o mundo juntos, colecionando memórias e sonhos compartilhados. Em cada nova viagem e em cada jantar caseiro, eles reafirmam o amor e a parceria que os trouxe até aqui.</p> <p>Agora, cercados por amigos e familiares, Zuleika e Ubiratam estão prontos para dar o próximo passo e oficializar a união que ilumina suas vidas. Eles mal podem esperar para compartilhar este momento especial com todos aqueles que fazem parte de sua história.</p> </section>
+
+    <!-- Local -->
+    <section id="local" data-aos="fade-up"> <h2>Local da Festa</h2> <p>Após a cerimônia, todos estão convidados a se juntar a nós no Salão de Festas Encanto, um espaço aconchegante e sofisticado, com decoração rústica e uma vista encantadora para o lago. Haverá coquetéis de boas-vindas ao som de uma banda de jazz ao vivo, seguidos de um jantar cuidadosamente preparado, com pratos que incluem opções vegetarianas e veganas.</p> <p>Para a comodidade dos nossos convidados, disponibilizaremos transporte a partir da igreja, saindo às 17h30 em direção ao salão, e com retorno ao ponto de partida ao final da festa.</p> <p>Estamos planejando cada detalhe para criar uma noite inesquecível. Prepare-se para uma festa com muita dança, boa comida e um cenário deslumbrante para celebrar nosso amor!</p> </section>
+
+    <!-- Galeria , todas as fotos foram tiradas desse site https://www.williammota.com.br/portfolio/casamentos/675797-kelliny-rogerio-->
+    <section id="galeria"  class="section" data-aos="fade-up">
+        <h2>Galeria de Fotos</h2>
+        <div class="gallery">
+            <div class="category">
+                <h3>Pré Casamento</h3>
+                <div class="photos">
+                    <img src="src/Pré-Casamento 1.jpg" alt="Pré Casamento 1">
+                    <img src="src/Pré-Casamento 2.jpg" alt="Pré Casamento 2">
+                    <img src="src/Pré-Casamento 3.jpg" alt="Pré Casamento 3">
+                    <img src="src/Pré-Casamento 4.jpg" alt="Pré Casamento 4">
+                </div>
+            </div>
+            <div class="category">
+                <h3>Dia da Noiva</h3>
+                <div class="photos">
+                    <img src="src/Dia da Noiva 1.jpg" alt="Dia da Noiva 1">
+                    <img src="src/Dia da Noiva 2.jpg" alt="Dia da Noiva 2">
+                    <img src="src/Dia da Noiva 3.jpg" alt="Dia da Noiva 3">
+                    <img src="src/Dia da Noiva 4.jpg" alt="Dia da Noiva 4">
+                </div>
+            </div>
+            <div class="category">
+                <h3>Cerimônia</h3>
+                <div class="photos">
+                    <img src="src/Cerimônia 1.jpg" alt="Cerimônia 1">
+                    <img src="src/Cerimônia 2.jpg" alt="Cerimônia 2">
+                    <img src="src/Cerimônia 3.jpg" alt="Cerimônia 3">
+                    <img src="src/Cerimônia 4.jpeg" alt="Cerimônia 4">
+                </div>
+            </div>
+            <div class="category">
+                <h3>Festa</h3>
+                <div class="photos">
+                    <img src="src/Festa 1.jpg" alt="Festa 1">
+                    <img src="src/Festa 2.jpg" alt="Festa 2">
+                    <img src="src/Festa 3.jpg" alt="Festa 3">
+                    <img src="src/Festa 4.jpg" alt="Festa 4">
+                </div>
+            </div>
+            <div class="category">
+                <h3>Lua de Mel</h3>
+                <div class="photos">
+                    <img src="src/Lua de Mel 1.jpg" alt="Lua de Mel 1">
+                    <img src="src/Lua de Mel 2.jpg" alt="Lua de Mel 2">
+                    <img src="src/Lua de Mel 3.jpg" alt="Lua de Mel 3">
+                    <img src="src/Lua de Mel 4.jpg" alt="Lua de Mel 4">
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Confirmação de Presença -->
+    <section id="rsvp"  class="section" data-aos="fade-up">
+        <h2>Confirmação de Presença</h2>
+        <form id="rsvp-form">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="acompanhantes">Quantidade de Acompanhantes:</label>
+            <div class="counter">
+                <button type="button" onclick="decrement()">-</button>
+                <input type="number" id="acompanhantes" name="acompanhantes" min="0" value="0" readonly>
+                <button type="button" onclick="increment()">+</button>
+            </div>
+
+            <label for="nomes-acompanhantes">Nome dos Acompanhantes:</label>
+            <textarea id="nomes-acompanhantes" name="nomes-acompanhantes"></textarea>
+
+            <button type="submit">Confirmar Presença</button>
+        </form>
+        <div id="confirmation-message" class="hidden">Presença confirmada! Nos vemos no grande dia!</div>
+    </section>
+
+   <!-- Player de música no topo -->
+   <div id="music-player">
+    <button id="prev-btn">&#9664;</button>
+    <button id="play-pause-btn">▶</button>
+    <button id="next-btn">&#9654;</button>
+    <div id="waveform"></div>
+    </div>
+    <!-- Botão de rolagem -->
+    <button id="scroll-button" onclick="document.getElementById('galeria').scrollIntoView({behavior: 'smooth'})">❣️</button>
+</body>
+<!-- Rodapé -->
+<footer>
+    <div class="footer-content">
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61561585338009&locale=pt_BR" class="social-button">
+                <img src="src/facebook.svg" alt="Facebook" class="social-icon">
+            </a>
+            <a href="https://github.com/beatrisAS" class="social-button">
+                <img src="src/github.svg" alt="Github" class="social-icon">
+            </a> 
+            <a href="https://www.instagram.com/beatrissilvaantunes" class="social-button">
+                <img src="src/instagram.svg" alt="Instagram" class="social-icon">
+            </a>
+        </div>
+        <p class="footer-text">Desenvolvido por Beatris Antunes Silva - 2024</p>
+    </div>
+</footer>
+</html>

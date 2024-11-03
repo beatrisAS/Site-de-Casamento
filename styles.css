@@ -1,0 +1,581 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f4f1;
+    color: #4d4d4d;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+/* Header e logo */
+header {
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #e8d0b5;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;   
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+header img {
+    height: 70px; 
+    display: block; 
+}
+
+header .logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+    font-weight: bold;
+    color: #d58e94;
+    line-height: 1;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    text-decoration: none;
+    color: #4d4d4d;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #d58e94;
+}
+
+#music-player {
+    width: 250px; 
+    height: 60px; 
+    background-color: rgba(249, 244, 241, 0.9); 
+    position: fixed;
+    bottom: 0;  
+    left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    z-index: 1001;
+    padding: 5px;
+}
+
+#music-player button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #4d4d4d;
+    cursor: pointer;
+}
+
+#waveform {
+    width: 150px; 
+    height: 20px;
+}
+
+/* Capa */
+.cover {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 100px;
+}
+
+.cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+    border: 2px solid #e8d0b5; 
+    border-radius: 10px;
+}
+
+.countdown {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #f5e8e9; 
+    color: #d58e94;
+    border: 2px solid #e8d0b5; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#countdown-timer {
+    transition: all 0.5s ease-in-out;
+}
+#countdown-timer:hover {
+    transform: scale(1.05);
+    color: #a0522d;
+}
+
+ /* Controles de música fixos */
+ #music-control {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1001;
+}
+
+/* Efeito de corações */
+.heart {
+    position: fixed;
+    top: -50px;
+    font-size: 2rem;
+    color: #d58e94;
+    animation: fall 5s infinite;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-50px); opacity: 1; }
+    100% { transform: translateY(100vh); opacity: 0; }
+}
+
+section {
+    padding: 0.5rem;
+}
+
+.section img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.section img:hover {
+    transform: scale(1.05);
+}
+
+
+h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #d58e94; 
+    border-bottom: 1px solid #d8bfb0;
+    padding-bottom: 0.5rem;
+}
+h3{
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+}
+
+/* Estilo da galeria de fotos */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
+}
+.gallery img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+.category {
+    flex: 1 1 30%;
+    max-width: 30%;
+    text-align: center;
+}
+
+.photos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.photos img {
+    width: 100%;
+    height: auto;
+    border: 3px solid #e8d0b5;
+    border-radius: 8px;
+}
+
+.gift-catalog {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.gift-item {
+    width: 200px;
+}
+
+.gift-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid #e8d0b5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #4d4d4d;
+    height: 250px; 
+    transition: color 0.3s ease;
+}
+
+.gift-card:hover .gift-title, .gift-card:focus .gift-title {
+    color: #d58e94;
+}
+
+.gift-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: 0.5rem 0;
+    margin: 0.5rem 0;
+    align-items: center;
+    object-fit: contain; 
+    max-height: 150px;
+}
+
+.gift-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #4d4d4d;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.gift-description {
+    font-size: 0.9rem;
+    color: #4d4d4d;
+}
+
+
+
+/* RSVP Style */
+#rsvp {
+    background-color: #ffffff;
+    padding: 2rem;
+    border: 1px solid #e8d0b5;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#rsvp h2 {
+    text-align: center;
+    color: #d58e94;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form label {
+    font-weight: bold;
+    color: #4d4d4d;
+}
+
+form input,
+form textarea {
+    resize: none;
+    padding: 0.7rem;
+    border: 1px solid #d8bfb0;
+    border-radius: 4px;
+    background-color: #fdfdfd;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+}
+
+.counter button {
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #d8bfb0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.counter input {
+    width: 50px;
+    text-align: center;
+    border: none;
+    background: none;
+    font-size: 1rem;
+}
+
+form button[type="submit"] {
+    padding: 0.8rem;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #d58e94;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button[type="submit"]:hover {
+    background-color: #bf7581; 
+}
+
+/* Mensagem de confirmação */
+#confirmation-message {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #d58e94;
+    text-align: center;
+    display: none;
+}
+
+#confirmation-message.hidden {
+    display: none; 
+}
+
+#confirmation-message:not(.hidden) {
+    display: block; 
+}
+
+
+/* Rodapé */
+footer {
+    background-color: #ffffff;
+    color: #4d4d4d;
+    text-align: right; 
+    font-style: italic;
+    font-weight: bold;
+    font-size: 0.8rem;
+    border-top: 2px solid #e8d0b5;
+    padding: 0.5rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.social-links {
+    display: flex;
+  
+    justify-content: flex-end;
+}
+
+.social-icon {
+    width: 50px;
+    filter: invert(45%) sepia(12%) saturate(0%) hue-rotate(132deg) brightness(90%) contrast(90%);
+}
+
+/* Estilo para os botões de redes sociais */
+.social-button {
+    display: inline-block;
+    transition: filter 0.3s, background-color 0.3s;
+}
+
+.social-button:hover .social-icon {
+    filter: brightness(0) saturate(100%) invert(59%) sepia(34%) saturate(1894%) hue-rotate(311deg) brightness(97%) contrast(88%);
+}
+
+
+/* Botão de rolagem */
+#music-player, #scroll-button {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Ocultar botão e player ao chegar no rodapé */
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Animação para fade-in e fade-out */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+    opacity: 0;
+}
+
+
+/* Estilo do scroll */
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #f9f4f1;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #d58e94;
+    border-radius: 6px;
+    border: 3px solid #f9f4f1;
+}
+   /* Estilo do botão de rolagem */
+   #scroll-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #d58e94;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#scroll-button:hover {
+    background-color: #bf7581;
+}
+
+/* Responsividade dispositivos móveis */
+@media (max-width: 768px) {
+    header .logo {
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .category {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    #rsvp {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #music-player, #scroll-button {
+        position: fixed;
+        right: 20px;
+    }
+}
+
+/* Menu lateral suspenso */
+#menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%;
+    max-width: 300px;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    padding-top: 2rem;
+    display: none;
+}
+
+#mobile-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#mobile-menu li {
+   margin: 10px;
+}
+
+#mobile-menu a {
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+    color: #4d4d4d;
+    font-weight: bold;
+}
+
+#mobile-menu a {
+    text-decoration: none;
+    color: #4d4d4d;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#mobile-menu a:hover,
+#mobile-menu a:focus,
+#mobile-menu a:active {
+    color: #d58e94;
+}
+
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+    #desktop-menu {
+        display: none;
+    }
+}
+
+/* Animação para efeito de surgimento do menu */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+#mobile-menu.slide-in {
+    animation: slideIn 0.3s ease forwards;
+}
