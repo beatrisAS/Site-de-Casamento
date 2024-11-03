@@ -32,7 +32,7 @@ cd Site-de-Casamento
 O objetivo do projeto é criar um espaço especial para celebrar o amor de Zuleika e Ubiratam, proporcionando aos convidados uma experiência memorável com informações sobre o casamento e um design encantador.
 
 
-## Creditos
+## Créditos
 Esse site é um site fictício usado apenas para fins acadêmicos. Todas as fotos da galeria e dos noivos foram tirados desse site:
 ```
  https://www.williammota.com.br/portfolio/casamentos/675797-kelliny-rogerio4
